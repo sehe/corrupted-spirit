@@ -42,7 +42,7 @@ const auto quoted_string_def = lexeme['"' >> +(char_ - '"') >> '"'];
 const auto person_def = int_ >> ',' >> quoted_string >> ',' >> quoted_string;
 const auto employee_def = '{' >> person >> ',' >> double_ >> '}';
 const auto employees_def = employee >> *(',' >> employee);
-BOOST_SPIRIT_DEFINE(quoted_string, person, employee, employees);
+BOOST_SPIRIT_DEFINE(quoted_string, person, employee, employees)
 
 struct person_class : annotate_position
 {

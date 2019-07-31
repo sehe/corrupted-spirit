@@ -21,9 +21,9 @@ struct employees_class;
 using person_type = x3::rule<person_class, ast::person>;
 using employee_type = x3::rule<employee_class, ast::employee>;
 using employees_type = x3::rule<employees_class, std::vector<ast::employee>>;
-BOOST_SPIRIT_DECLARE(person_type);
-BOOST_SPIRIT_DECLARE(employee_type);
-BOOST_SPIRIT_DECLARE(employees_type);
+BOOST_SPIRIT_DECLARE(person_type)
+BOOST_SPIRIT_DECLARE(employee_type)
+BOOST_SPIRIT_DECLARE(employees_type)
 } // namespace parser
 
 parser::person_type person();
