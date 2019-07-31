@@ -20,7 +20,7 @@ using simple_context_type = x3::phrase_parse_context<x3::ascii::space_type>::typ
 
 using context_type = boost::spirit::x3::context<
     client::parser::position_cache_tag,
-    std::reference_wrapper<position_cache>, 
+    position_cache, 
     simple_context_type
 >;
 } // namespace parser

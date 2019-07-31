@@ -28,7 +28,7 @@ std::vector<client::ast::employee> parse(std::string const &input, position_cach
 	auto const parser =
 		// we pass our position_cache to the parser so we can access
 		// it later in our on_sucess handlers
-		with<position_cache_tag>(std::ref(positions))[client::employees()];
+		with<position_cache_tag>(positions)[client::employees()];
 
 	bool r = phrase_parse(iter, end, parser, space, ast);
 
